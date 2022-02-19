@@ -1,0 +1,14 @@
+body {
+    background-color: lightslategray;
+    color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div#area {
+    background-color: green;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}

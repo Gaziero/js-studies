@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>That's the title</h1>
+    <h2>That's the subtitle</h2>
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph with a <a href="#">link</a>.</p>
+    <div id="area" onclick="clicked()" onmouseover="colorChange()">
+        interact with me
+    </div>
+
+    <script>
+        var mainButton = window.document.getElementById("area")
+        function clicked() {
+            mainButton.innerText = "I've been clicked!"
+        }
+
+        function colorChange()  {
+            mainButton.style.backgroundColor = "blue"
+        }
+    </script>
+</body>
+</html>
