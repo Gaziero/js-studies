@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DOM studies</h1>
+    <p>Here goes the result</p>
+    <p>Learning to use the <strong>DOM</strong> from JavaScript</p>
+    <div id="msg">Click me</div>
+    <script>
+        var p1 = window.document.getElementsByTagName("p")[0]
+        window.document.write(p1.innerText)
+
+        /*var msg = window.document.getElementById("msg")
+        msg.style.color = "purple"*/
+
+        var msg = window.document.querySelector("div#msg")
+        msg.style.color = "purple"
+    </script>
+</body>
+</html>
