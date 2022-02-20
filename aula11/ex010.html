@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fines system</h1>
+    Car speed: <input type="number" name="strVel" id="strVel">
+    <input type="button" value="Verify" onclick="calc()">
+    <div id="speed">
+    </div>
+    <div id="fine">
+    </div>
+
+    <script>
+        function calc() {
+            var strVel = window.document.getElementById("strVel")
+            var answer = window.document.getElementById("speed")
+            var fine = window.document.getElementById("fine")
+            var vel = Number(strVel.value)
+            speed.innerHTML = `Your current speed is ${vel}Km/h`
+            if (vel > 60) {
+                fine.innerHTML = `You have been fined`
+            }
+        }
+    </script>
+</body>
+</html>

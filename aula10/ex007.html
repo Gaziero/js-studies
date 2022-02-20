@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sum of numbers</h1>
+    <input type="number" name="strn1" id="strn1"> 
+    +
+    <input type="number" name="strn2" id="strn2">
+    <input type="button" value="Sum" onclick="sum()">
+    <div id="result">
+        Result:
+    </div>
+
+    <script>
+        function sum() {
+            var sn1 = window.document.getElementById("strn1")
+            var sn2 = window.document.getElementById("strn2")
+            var res = window.document.getElementById("result")
+            var n1 = Number(sn1.value)
+            var n2 = Number(sn2.value)
+            var s = n1 + n2
+            res.innerHTML = `The sum betweem ${n1} and ${n2} is ${s}`
+        }
+    </script>
+</body>
+</html>

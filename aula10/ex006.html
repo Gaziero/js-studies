@@ -12,18 +12,28 @@
     <h2>That's the subtitle</h2>
     <p>This is a paragraph.</p>
     <p>This is a paragraph with a <a href="#">link</a>.</p>
-    <div id="area" onclick="clicked()" onmouseover="colorChange()">
+    <div id="area">
         interact with me
     </div>
 
     <script>
         var mainButton = window.document.getElementById("area")
-        function clicked() {
-            mainButton.innerText = "I've been clicked!"
+
+        mainButton.addEventListener("click", clicked)
+        mainButton.addEventListener("mouseenter", enter)
+        mainButton.addEventListener("mouseout", exit)
+
+        function enter()  {
+            mainButton.style.backgroundColor = "blue"
         }
 
-        function colorChange()  {
-            mainButton.style.backgroundColor = "blue"
+        function exit() {
+            mainButton.style.backgroundColor = "green"
+        }
+
+        function clicked() {
+            mainButton.innerText = "I've been clicked!"
+            mainButton.style.backgroundColor = "red"
         }
     </script>
 </body>
