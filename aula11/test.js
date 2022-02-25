@@ -1,44 +1,20 @@
-var holder = window.document.getElementById("holder")
-var square = window.document.getElementById("square")
+document.getElementById("holder", holder);
+document.getComputedStyle(holder, holderStyle);
+document.getElementById("square", square);
+document.getComputedStyle(square, squareStyle);
 
-var holderStyle = window.getComputedStyle(holder)
-var squareStyle = window.getComputedStyle(square)
+window.document.getElementById("square").addEventListener("mouseover", mouseOver);
+window.document.getElementById("square").addEventListener("mouseout", mouseOut);
 
-var rowPos = holderStyle.getPropertyValue("align-items")
-var colPos = holderStyle.getPropertyValue("justify-content")
+var rowPos = holderStyle.getPropertyValue("align-items");
+var colPos = holderStyle.getPropertyValue("justify-content");
 
 function clicked() {
-    if (rowPos == "start" && colPos == "start") {
-        var newRowPos = "start"
-        var newColPos = "end"
-        var newColor = "green"
-        var newRound = "0 100% 0 0"
-    }
-    if (rowPos == "start" && colPos == "end") {
-        var newRowPos = "end"
-        var newColPos = "end"
-        var newColor = "blue"
-        var newRound = "0 0 100%  0"
-    }
-    if (rowPos == "end" && colPos == "end") {
-        var newRowPos = "end"
-        var newColPos = "start"
-        var newColor = "red"
-        var newRound = "0 0 0 100%"
-    }
-    if (rowPos == "end" && colPos == "start") {
-        var newRowPos = "start"
-        var newColPos = "start"
-        var newColor = "yellow"
-        var newRound = "100% 0 0 0"
-    }
+    holder.style.justifyContent = "end"
+    square.style.width = "100%"
+    square.style.backgroundColor = "red"
+}
 
-    square.style.backgroundColor = newColor
-    square.style.borderRadius = newRound
-
-    holder.style.alignItems = newRowPos
-    rowPos = newRowPos
-
-    holder.style.justifyContent = newColPos
-    colPos = newColPos
+function mouseOver() {
+    document.getElementById("square").style.backgroundColor = "green"
 }

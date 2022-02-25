@@ -10,15 +10,6 @@ body {
     font-family:'Segoe UI', sans-serif;
 }
 
-div#area {
-    background-color: green;
-    color: #fff;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    text-align: center;
-}
-
 #holder {
     display: flex;
     margin: 5vh auto;
@@ -36,8 +27,7 @@ div#area {
     text-align: center;
     line-height: 45vh;
     cursor: pointer;
-    border-radius: 100% 0 0 0;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 p {
